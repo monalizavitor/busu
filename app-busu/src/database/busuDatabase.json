@@ -1,0 +1,195 @@
+[
+    {
+        "placa": "BAE4T25",
+        "cor": "cinza",
+        "destino": "Ipatinga",
+        "horarios": [
+            "6h35",
+            "7h40",
+            "8h35"
+        ],
+        "embarque": [
+            "Altivo Machado dos Reis, 505",
+            "Rua Altivo Machado dos Reis, 299",
+            "Rua Pouso Alegrem, 451",
+            "Rua Benedito José de Souza, 168",
+            "Rua Olivia Rodrigues Viera, 268",
+            "Rua dos esportes, 51, em frente ao campo de futebol",
+            "Rua Itabira, 443 (av dois)",
+            "Praça Padre Jose Lanzilotd, 102 Ipaba"
+        ],
+        "desembarque": [
+            "Avenida João Valentim Pascoal, 955",
+            "Câmara Municipal De Ipatinga",
+            "Avenida João Valentim Pascoal, 829",
+            "Avenida João Valentim Pascoal, 637",
+            "Terminal Rodoviário De Ipatinga",
+            "Avenida João Valentim Pascoal, 255",
+            "Avenida João Valentim Pascoal, 135",
+            "Avenida Cláudio Moura - Acesso Ao Bairro Castelo"
+        ],
+        "tempo_estimado": "25min",
+        "nome_do_motorista": "Afonso Souza Medeiros"
+    },
+    {
+        "placa": "TEO0S18",
+        "cor": "cinza",
+        "destino": "Ipatinga",
+        "horarios": [
+            "13h00",
+            "13h40",
+            "14h55"
+        ],
+        "embarque": [
+            "Altivo Machado dos Reis, 505",
+            "Rua Altivo Machado dos Reis, 299",
+            "Rua Pouso Alegrem, 451",
+            "Rua Benedito José de Souza, 168",
+            "Rua Olivia Rodrigues Viera, 268",
+            "Rua dos esportes, 51, em frente ao campo de futebol",
+            "Rua Itabira, 443 (av dois)",
+            "Praça Padre Jose Lanzilotd, 102 Ipaba"
+        ],
+        "desembarque": [
+            "Avenida João Valentim Pascoal, 955",
+            "Câmara Municipal De Ipatinga",
+            "Avenida João Valentim Pascoal, 829",
+            "Avenida João Valentim Pascoal, 637",
+            "Terminal Rodoviário De Ipatinga",
+            "Avenida João Valentim Pascoal, 255",
+            "Avenida João Valentim Pascoal, 135",
+            "Avenida Cláudio Moura - Acesso Ao Bairro Castelo"
+        ],
+        "tempo_estimado": "25min",
+        "nome_do_motorista": "Carlos Santos"
+    },
+    {
+        "placa": "BAE4T25",
+        "cor": "cinza",
+        "destino": "Ipaba",
+        "horarios": [
+            "7h05",
+            "8h15",
+            "9h35"
+        ],
+        "embarque": [
+            "Avenida João Valentim Pascoal, 955",
+            "Câmara Municipal De Ipatinga",
+            "Avenida João Valentim Pascoal, 829",
+            "Avenida João Valentim Pascoal, 637",
+            "Terminal Rodoviário De Ipatinga",
+            "Avenida João Valentim Pascoal, 255",
+            "Avenida João Valentim Pascoal, 135",
+            "Avenida Cláudio Moura - Acesso Ao Bairro Castelo"
+        ],
+        "desembarque": [
+            "Altivo Machado dos Reis, 505",
+            "Rua Altivo Machado dos Reis, 299",
+            "Rua Pouso Alegrem, 451",
+            "Rua Benedito José de Souza, 168",
+            "Rua Olivia Rodrigues Viera, 268",
+            "Rua dos esportes, 51, em frente ao campo de futebol",
+            "Rua Itabira, 443 (av dois)",
+            "Praça Padre Jose Lanzilotd, 102 Ipaba"
+        ],
+        "tempo_estimado": "25min",
+        "nome_do_motorista": "Afonso Souza Medeiros"
+    },
+    {
+        "placa": "TEO0S18",
+        "cor": "cinza",
+        "destino": "Ipaba",
+        "horarios": [
+            "16h20",
+            "16h55",
+            "17h30"
+        ],
+        "embarque": [
+            "Avenida João Valentim Pascoal, 955",
+            "Câmara Municipal De Ipatinga",
+            "Avenida João Valentim Pascoal, 829",
+            "Avenida João Valentim Pascoal, 637",
+            "Terminal Rodoviário De Ipatinga",
+            "Avenida João Valentim Pascoal, 255",
+            "Avenida João Valentim Pascoal, 135",
+            "Avenida Cláudio Moura - Acesso Ao Bairro Castelo"
+        ],
+        "desembarque": [
+            "Altivo Machado dos Reis, 505",
+            "Rua Altivo Machado dos Reis, 299",
+            "Rua Pouso Alegrem, 451",
+            "Rua Benedito José de Souza, 168",
+            "Rua Olivia Rodrigues Viera, 268",
+            "Rua dos esportes, 51, em frente ao campo de futebol",
+            "Rua Itabira, 443 (av dois)",
+            "Praça Padre Jose Lanzilotd, 102 Ipaba"
+        ],
+        "tempo_estimado": "25min",
+        "nome_do_motorista": "Carlos Santos"
+    },
+    {
+        "placa": "JJK9T20",
+        "cor": "cinza",
+        "destino": "Ipaba",
+        "horarios": [
+            "14H20",
+            "15h00",
+            "15h35"
+        ],
+        "embarque": [
+            "Avenida João Valentim Pascoal, 955",
+            "Câmara Municipal De Ipatinga",
+            "Avenida João Valentim Pascoal, 829",
+            "Avenida João Valentim Pascoal, 637",
+            "Terminal Rodoviário De Ipatinga",
+            "Avenida João Valentim Pascoal, 255",
+            "Avenida João Valentim Pascoal, 135",
+            "Avenida Cláudio Moura - Acesso Ao Bairro Castelo"
+        ],
+        "desembarque": [
+            "Altivo Machado dos Reis, 505",
+            "Rua Altivo Machado dos Reis, 299",
+            "Rua Pouso Alegrem, 451",
+            "Rua Benedito José de Souza, 168",
+            "Rua Olivia Rodrigues Viera, 268",
+            "Rua dos esportes, 51, em frente ao campo de futebol",
+            "Rua Itabira, 443 (av dois)",
+            "Praça Padre Jose Lanzilotd, 102 Ipaba"
+        ],
+        "tempo_estimado": "25min",
+        "nome_do_motorista": "Nelson Medeiros"
+    },
+    {
+        "placa": "QZO7U19",
+        "cor": "cinza",
+        "destino": "Ipaba",
+        "horarios": [
+            "15H45",
+            "16h30",
+            "17h35"
+        ],
+        "embarque": [
+            "Avenida João Valentim Pascoal, 955",
+            "Câmara Municipal De Ipatinga",
+            "Avenida João Valentim Pascoal, 829",
+            "Avenida João Valentim Pascoal, 637",
+            "Terminal Rodoviário De Ipatinga",
+            "Avenida João Valentim Pascoal, 255",
+            "Avenida João Valentim Pascoal, 135",
+            "Avenida Cláudio Moura - Acesso Ao Bairro Castelo"
+        ],
+        "desembarque": [
+            "Altivo Machado dos Reis, 505",
+            "Rua Altivo Machado dos Reis, 299",
+            "Rua Pouso Alegrem, 451",
+            "Rua Benedito José de Souza, 168",
+            "Rua Olivia Rodrigues Viera, 268",
+            "Rua dos esportes, 51, em frente ao campo de futebol",
+            "Rua Itabira, 443 (av dois)",
+            "Praça Padre Jose Lanzilotd, 102 Ipaba"
+        ],
+        "tempo_estimado": "25min",
+        "nome_do_motorista": "Eduardo Galeano"
+    }
+
+]
