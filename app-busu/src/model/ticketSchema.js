@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+const helper = require('../helpers/helpers')
+
 
 // estruturando o model
 const ticketSchema = new Schema({
@@ -19,13 +21,7 @@ const ticketSchema = new Schema({
         auto: false,
         required: true
     },
-    horario: {
-        type: Number,
-        auto: false,
-        required: true
-
-    }, 
-    mensagem: {
+    destino: {
         type: String,
         auto: false,
         required: true
@@ -35,6 +31,7 @@ const ticketSchema = new Schema({
     // gera por padrão uma versão para cada atualização do documento
     versionKey: false
 })
+
 
 
 // atribuindo o esquema a uma collection

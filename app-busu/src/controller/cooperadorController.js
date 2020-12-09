@@ -30,7 +30,23 @@ const getAllCooperadores = (req, res) => {
 
 }
 
+const findBusu = (req, res) => {
+    console.log(`Método: ${req.method}, endpoint: ${req.url}`)
+
+    const id = req.params.id
+
+    cooperadorSchema.findById(id, (error, busu) => {
+        if (error)
+            return res.status(500).send(error)
+
+        return res.status(200).send(busu)
+    })
+
+}
+
+
 
 module.exports = {
-    getAllCooperadores
+    getAllCooperadores,
+    findBusu
 }

@@ -7,6 +7,6 @@ const router = express.Router()
 
 router.get('/', controllerCooperador.getAllCooperadores)
 
-
+router.get('/:id', controllerCooperador.findBusu)
 
 module.exports = router

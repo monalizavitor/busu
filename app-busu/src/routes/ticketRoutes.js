@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 
-router.get('/', controllerTicket.getTicket)
+router.post('/create', controllerTicket.getTicket)
 
 
 
