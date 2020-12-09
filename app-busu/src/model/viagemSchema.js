@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const cooperadorSchema = new Schema({
+const viagemSchema = new Schema({
 
     _id: {
         type: mongoose.Schema.Types.ObjectId,
         auto: true,
-        Ref: 'user',
+        ref: 'ticket',
         required: true
     },
     placa: {
@@ -24,7 +24,7 @@ const cooperadorSchema = new Schema({
         auto: false,
         required: true
     },
-    horarios: {
+    horario: {
         type: String,
         auto: false,
         required: true
@@ -42,15 +42,15 @@ const cooperadorSchema = new Schema({
     tempo_estimado: {
         type: String,
         auto: false,
-        required: true
+        required: false
     },
-    nome_do_motorista: {
+    motorista: {
         type: String,
         auto: false,
         required: true
     },
     valor: {
-        type: Number,
+        type: String,
         auto: false,
         required: true
     }
@@ -60,6 +60,6 @@ const cooperadorSchema = new Schema({
 
 })
 
-const cooperadorCollection = mongoose.model('cooperadores', cooperadorSchema)
+const viagemCollection = mongoose.model('viagensBusu', viagemSchema)
 
-module.exports = cooperadorCollection
+module.exports = viagemCollection

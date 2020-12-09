@@ -1,11 +1,9 @@
-const cooperadorSchema = require('../model/cooperadorSchema')
+const viagemSchema = require('../model/viagemSchema')
 
-const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
-const getAllCooperadores = (req, res) => {
-
+const getAll = (req, res) => {
     console.log(`Método: ${req.method}, endpoint: ${req.url}`)
 
     const authHeader = req.get('authorization')
@@ -20,11 +18,11 @@ const getAllCooperadores = (req, res) => {
         if (error)
             return res.status(403).send({ message: 'Token inválido!' })
 
-        cooperadorSchema.find((error, cooperador) => {
+        viagemSchema.find((error, viagem) => {
             if (error)
                 return res.sendStatus(500)
 
-            return res.status(200).send(cooperador)
+            return res.status(200).send(viagem)
         })
     })
 
@@ -33,9 +31,9 @@ const getAllCooperadores = (req, res) => {
 const findBusu = (req, res) => {
     console.log(`Método: ${req.method}, endpoint: ${req.url}`)
 
-    const id = req.params.id
+    const destino = req.query
 
-    cooperadorSchema.findById(id, (error, busu) => {
+    viagemSchema.find(destino, (error, busu) => {
         if (error)
             return res.status(500).send(error)
 
@@ -47,6 +45,6 @@ const findBusu = (req, res) => {
 
 
 module.exports = {
-    getAllCooperadores,
+    getAll,
     findBusu
 }

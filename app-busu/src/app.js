@@ -15,7 +15,7 @@ db.connect()
 
 //rotas
 const routesUser = require('./routes/userRoutes')
-const routesCooperador = require('./routes/cooperadorRoutes')
+const routesViagem = require('./routes/viagemRoutes')
 const routesTicket = require('./routes/ticketRoutes')
 
 app.use(express.json())
@@ -39,8 +39,9 @@ app.use((req, res, next) => {
 
 
 app.use('/user', routesUser)
-app.use('/cooperadores', routesCooperador)
+app.use('/viagem', routesViagem)
 app.use('/ticket', routesTicket)
+
 
 
 module.exports = app

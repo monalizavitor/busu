@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const mongoURI = process.env.MONGODB_URL
-//mongodb://localhost:27017/projetoBusu
+//mongodb://localhost:27017/busu
 
 const connect = () => {
     mongoose.connect(mongoURI,

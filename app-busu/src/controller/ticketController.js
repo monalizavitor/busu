@@ -1,15 +1,15 @@
 const ticketSchema = require('../model/ticketSchema')
-const findCooperador = require('../model/cooperadorSchema')
+const findBusu = require('../model/viagemSchema')
 
 
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const ticketCollection = require('../model/ticketSchema')
 const SECRET = process.env.SECRET
 
 
 const getTicket = (req, res) => {
-
-    console.log(`Método: ${req.method}, endpoint: ${req.url}`)
+    console.log(`Método: ${req.method} ${req.url}`)
 
     const authHeader = req.get('authorization')
 
@@ -24,7 +24,7 @@ const getTicket = (req, res) => {
             return res.status(403).send({ message: 'Token inválido!' })
 
 
-        findCooperador.find({ destino: req.body.destino }, (error, coop) => {
+        findBusu.find({ destino: req.body.destino }, (error, busu) => {
             if (error)
                 return res.sendStatus(500)
 
@@ -35,20 +35,42 @@ const getTicket = (req, res) => {
                     return res.status(500).send(error)
 
                 return res.status(201).
-                    send(`Ticket gerado com sucesso. Apresente seu ticket no embarque 
-            ${newTicket}. 
-            ${coop}.
-            Boa viagem ${newTicket.nome}!`)
+                    send('Ticket gerado com suesso! ' + newTicket)
+               
+
+
+
             })
 
         })
     })
 
-
-
-
 }
 
+
+const updateTicket = (req, res) => {
+    console.log(`Método: ${req.method} ${req.url}`)
+
+    const { id } = request.params.id //pegando o valor do ID na URL
+    const { ticketBody } = request.body
+    const update = { new: true }
+
+    ticketSchema.findByIdAndUpdate(
+        id,
+        ticketBody,
+        update,
+        (error, ticket) => {
+            if (error)
+                return res.sendStatus(500)
+            return res.status(200).send({ message: `${ticket} ${req.params.id} alterado.` })
+
+        }
+    )
+}
+
+
+
 module.exports = {
-    getTicket
+    getTicket,
+    updateTicket
 }

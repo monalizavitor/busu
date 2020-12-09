@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const helper = require('../helpers/helpers')
 
 
 // estruturando o model
@@ -8,6 +7,7 @@ const ticketSchema = new Schema({
 
     _id: {
         type: mongoose.Schema.Types.ObjectId,
+        ref: 'user',
         auto: true,
         required: true
     },
@@ -16,7 +16,7 @@ const ticketSchema = new Schema({
         auto: false,
         required: true
     },
-    data: {
+    data_da_viagem: {
         type: Date,
         auto: false,
         required: true
@@ -28,9 +28,10 @@ const ticketSchema = new Schema({
     }
 
 }, {
-    // gera por padrão uma versão para cada atualização do documento
     versionKey: false
-})
+    // gera por padrão uma versão para cada atualização do documento
+    
+}, {timestamps: true})
 
 
 

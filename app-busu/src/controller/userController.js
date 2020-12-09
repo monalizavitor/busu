@@ -19,13 +19,12 @@ const signUp = async (req, res) => {
             res.status(500).send(error)
         }
 
-        res.status(201).send({ message: `Sua conta foi criada com sucesso ${user}.` })
+        res.status(201).send(user)
     })
 }
 
 
 const signIn = (req, res) => {
-
     console.log(`Método: ${req.method}, endpoint: ${req.url}`)
 
     userSchema.findOne({ email: req.body.email }, (error, user) => {
