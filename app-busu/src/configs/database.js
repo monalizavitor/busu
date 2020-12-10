@@ -1,10 +1,11 @@
-const mongoose = require('mongoose')
+require('dotenv-safe').config()
 
-const mongoURI = process.env.MONGODB_URL
-//mongodb://localhost:27017/busu
+const mongoose = require('mongoose')
+const MONGODB_URI = process.env.MONGODB_URI ||
+    'mongodb://localhost:27017/busu'
 
 const connect = () => {
-    mongoose.connect(mongoURI,
+    mongoose.connect(MONGODB_URI,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,

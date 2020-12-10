@@ -28,14 +28,14 @@ const getAll = (req, res) => {
 
 }
 
-const findBusu = (req, res) => {
+const findBusuByRoute = (req, res) => {
     console.log(`Método: ${req.method}, endpoint: ${req.url}`)
 
-    const destino = req.query
-
-    viagemSchema.find(destino, (error, busu) => {
+    viagemSchema.find({ name: req.params.name }, (error, busu) => {
         if (error)
             return res.status(500).send(error)
+        if (!busu)
+            return res.status(404).send('Destino não encontrado!')
 
         return res.status(200).send(busu)
     })
@@ -46,5 +46,5 @@ const findBusu = (req, res) => {
 
 module.exports = {
     getAll,
-    findBusu
+    findBusuByRoute
 }

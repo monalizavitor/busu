@@ -9,47 +9,48 @@ const viagemSchema = new Schema({
         ref: 'ticket',
         required: true
     },
-    placa: {
-        type: String,
-        auto: false,
-        required: true
-    },
-    cor: {
-        type: String,
-        auto: false,
-        required: true
-    },
     destino: {
         type: String,
         auto: false,
         required: true
     },
+    placa_do_carro: {
+        type: String,
+        auto: false,
+        required: true
+    },
+    cor_do_carro: {
+        type: String,
+        auto: false,
+        required: true
+    },
+    
     horario: {
         type: String,
         auto: false,
         required: true
     },
-    embarque: {
+    locais_para_embarque: {
         type: Array,
         auto: false,
         required: true
     },
-    desembarque: {
+    locais_para_desembarque: {
         type: Array,
         auto: false,
         required: true
     },
-    tempo_estimado: {
+    tempo_estimado_da_viagem: {
         type: String,
         auto: false,
         required: false
     },
-    motorista: {
+    nome_do_motorista: {
         type: String,
         auto: false,
         required: true
     },
-    valor: {
+    preco_da_passagem: {
         type: String,
         auto: false,
         required: true

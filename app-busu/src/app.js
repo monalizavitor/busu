@@ -17,14 +17,9 @@ db.connect()
 const routesUser = require('./routes/userRoutes')
 const routesViagem = require('./routes/viagemRoutes')
 const routesTicket = require('./routes/ticketRoutes')
+const routesindex = require('./routes/index')
 
 app.use(express.json())
-
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: true
-//   })
-// )
 
 
 //configuração do cors
@@ -37,10 +32,11 @@ app.use((req, res, next) => {
       next()
     })
 
-
+//rotas
 app.use('/user', routesUser)
 app.use('/viagem', routesViagem)
 app.use('/ticket', routesTicket)
+app.use('/index', routesindex)
 
 
 

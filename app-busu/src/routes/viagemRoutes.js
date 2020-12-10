@@ -9,6 +9,6 @@ router.get('/all', controllerViagem.getAll)
 
 // router.get('/:id', controllerViagem.findBusu)
 
-router.get('/:nome', controllerViagem.findBusu)
+router.get('/:name', controllerViagem.findBusuByRoute)
 
 module.exports = router
