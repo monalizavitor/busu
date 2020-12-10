@@ -1,23 +1,23 @@
 <h1 align="center">
-    <br>Busu<br/>
+    <br> :oncoming_bus: Busu<br/>
     Node.js | MongoDB|
 </h1>
 
 
 <p align="center">
-    <a href="sobre-o-projeto">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="como-executar">Como Executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#sobre-o-projeto">Sobre</a>
+    <a href="#tecnologias-utilizadas">Tecnologias</a>
+    <a href="#como-o-busu-em-uma-maquina-virtual">Teste</a>
     
 </p>
 
 
-## Sobre o Projeto
+## :boom: Sobre o Projeto
 
 O **Busu** é uma solução de transporte intermunicipal que atende bairros mais afastados do centro. Nosso principal objetivo é levar um veículo de oportunidades com um valor justo para todxs em suas locomoções diárias. Queremos mudar a realidade de milhares de famílias que não têm transporte digno e acessível em seus bairros/comunidades.
 
 
-## Tecnologias Utilizadas
+## :rocket: Tecnologias Utilizadas
 
 - Bcrypt
 - Cors
@@ -29,7 +29,7 @@ O **Busu** é uma solução de transporte intermunicipal que atende bairros mais
 
 
 
-## Rotas
+## :pushpin: Rotas
 
 Método | Rota |	Descrição |
 -----| ------- | --------- |
@@ -43,7 +43,7 @@ DELETE | `www.busu/ticket/cancel/:id` |	Deleta um dado a partir de um parâmetro
 
 
 
-## Teste o Busu em uma máquina virtual 
+### :computer: Teste o Busu em uma máquina virtual 
 
 [Heroku](https://app-busu.herokuapp.com/).
 
