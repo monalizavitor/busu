@@ -8,7 +8,8 @@
     <a href="#bookmark-sobre-o-projeto">Sobre</a> |
     <a href="#rocket-tecnologias-utilizadas">Tecnologias</a> |
     <a href="#pushpin-rotas">Rotas</a> |
-    <a href="#computer-como-o-busu-em-uma-maquina-virtual">Teste</a> 
+    <a href="#computer-teste-o-busu-em-uma-maquina-virtual">Teste</a> |
+     <a href="#memo-licença">Licença</a>
     
 </p>
 
@@ -47,5 +48,9 @@ DELETE | `www.busu/ticket/cancel/:id` |	Deleta um dado a partir de um parâmetro
 ### :computer: Teste o Busu em uma máquina virtual 
 
 [Heroku](https://app-busu.herokuapp.com/).
+
+#### :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 <sub>Aplicação desenvolvida como projeto final do bootcamp de backend da [{reprograma}](https://github.com/reprograma).</sub>
