@@ -7,7 +7,6 @@ const ticketSchema = new Schema({
 
     _id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'user',
         auto: true,
         required: true
     },

@@ -1,4 +1,4 @@
-const userSchema = require('../model/userSchema')
+const userCollection = require('../model/userSchema')
 
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -12,7 +12,7 @@ const signUp = async (req, res) => {
     const hashPassword = await bcrypt.hashSync(req.body.senha, 12)
     req.body.senha = hashPassword
 
-    const user = new userSchema(req.body)
+    const user = new userCollection(req.body)
 
     user.save((error) => {
         if (error) {
@@ -27,7 +27,7 @@ const signUp = async (req, res) => {
 const signIn = (req, res) => {
     console.log(`Método: ${req.method}, endpoint: ${req.url}`)
 
-    userSchema.findOne({ email: req.body.email }, (error, user) => {
+    userCollection.findOne({ email: req.body.email }, (error, user) => {
         if (!user)
             return res.status(404).send({ message: `O email ${req.body.email} não foi encontrado!` })
 
@@ -59,7 +59,7 @@ const getAll = (req, res) => {
         if (error)
             return res.status(403).send({ message: 'Token inválido!' })
 
-        userSchema.find((error, user) => {
+        userCollection.find((error, user) => {
             if (error)
                 return res.sendStatus(500)
 
@@ -69,10 +69,25 @@ const getAll = (req, res) => {
 
 }
 
+const deleteUser = (req, res) => {
+    console.log(`Método: ${req.method} ${req.url}`)
+
+    const id = req.params.id
+
+    userCollection.findByIdAndDelete(id, (error, user) => {
+        if (error)
+            return res.status(500).send('Houve um erro!')
+        if (!user)
+            return res.status(404).send('Id não encontrado!')
+        return res.status(200).send(`Usuário ${user.nome} deletado com sucesso!`)
+    })
+}
+
 
 
 module.exports = {
     signUp,
     signIn,
-    getAll
+    getAll,
+    deleteUser
 }

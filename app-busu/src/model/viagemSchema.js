@@ -6,7 +6,7 @@ const viagemSchema = new Schema({
     _id: {
         type: mongoose.Schema.Types.ObjectId,
         auto: true,
-        ref: 'ticket',
+        // ref: 'ticket',
         required: true
     },
     destino: {
@@ -56,8 +56,8 @@ const viagemSchema = new Schema({
         required: true
     }
 
-}, {// gera por padrão uma versão para cada atualização do documento
-    versionKey: false
+// }, {// gera por padrão uma versão para cada atualização do documento
+//     versionKey: false
 
 })
 

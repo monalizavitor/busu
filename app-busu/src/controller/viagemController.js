@@ -1,7 +1,9 @@
-const viagemSchema = require('../model/viagemSchema')
+const viagemCollection = require('../model/viagemSchema')
 
 const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
+
+
 
 const getAll = (req, res) => {
     console.log(`Método: ${req.method}, endpoint: ${req.url}`)
@@ -18,20 +20,23 @@ const getAll = (req, res) => {
         if (error)
             return res.status(403).send({ message: 'Token inválido!' })
 
-        viagemSchema.find((error, viagem) => {
+        viagemCollection.find((error, viagem) => {
             if (error)
-                return res.sendStatus(500)
+                return res.status(500).send('Houve um erro!')
 
             return res.status(200).send(viagem)
+
         })
     })
+
 
 }
 
 const findBusuByRoute = (req, res) => {
     console.log(`Método: ${req.method}, endpoint: ${req.url}`)
 
-    viagemSchema.find({ name: req.params.name }, (error, busu) => {
+    const name = req.param.name
+    viagemCollection.find(name, (error, busu) => {
         if (error)
             return res.status(500).send(error)
         if (!busu)
@@ -42,9 +47,23 @@ const findBusuByRoute = (req, res) => {
 
 }
 
+const createViagem = (req, res) => {
+
+    const viagem = new viagemCollection(req.body)
+
+    viagem.save((error) => {
+        if (error)
+            return res.sendStatus(500)
+
+        return res.status(200).send('ok criado')
+    })
+
+}
+
 
 
 module.exports = {
     getAll,
-    findBusuByRoute
+    findBusuByRoute,
+    createViagem
 }
