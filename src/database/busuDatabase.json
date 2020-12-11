@@ -88,8 +88,8 @@
     },
     {
         "destino": "Ipatinga",
-        "placa": "TEO0S18",
-        "cor": "cinza",
+        "placa_do_carro": "TEO0S18",
+        "cor_do_carro": "cinza",
         "horario": "13h00",
         "locais_para_embarque": [
             "Altivo Machado dos Reis, 505",
@@ -117,8 +117,8 @@
     },
     {
         "destino": "Ipaba",
-        "placa": "TEO0S18",
-        "cor": "cinza",
+        "placa_do_carro": "TEO0S18",
+        "cor_do_carro": "cinza",
         "horario": "13h35",
         "locais_para_embarque": [
             "Avenida João Valentim Pascoal, 955",
@@ -146,8 +146,8 @@
     },
     {
         "destino": "Ipatinga",
-        "placa": "TEO0S18",
-        "cor": "cinza",
+        "placa_do_carro": "TEO0S18",
+        "cor_do_carro": "cinza",
         "horario": "14h25",
         "locais_para_embarque": [
             "Altivo Machado dos Reis, 505",
@@ -175,8 +175,8 @@
     },
     {
         "destino": "Ipaba",
-        "placa": "TEO0S18",
-        "cor": "cinza",
+        "placa_do_carro": "TEO0S18",
+        "cor_do_carro": "cinza",
         "horario": "14h55",
         "locais_para_embarque": [
             "Avenida João Valentim Pascoal, 955",
@@ -204,8 +204,8 @@
     },
     {
         "destino": "Ipaba",
-        "placa": "GMOFS08",
-        "cor": "cinza",
+        "placa_do_carro": "GMOFS08",
+        "cor_do_carro": "cinza",
         "horario": "16h00",
         "locais_para_embarque": [
             "Avenida João Valentim Pascoal, 955",
@@ -233,8 +233,8 @@
     },
     {
         "destino": "Ipatinga",
-        "placa": "GMOFS08",
-        "cor": "cinza",
+        "placa_do_carro": "GMOFS08",
+        "cor_do_carro": "cinza",
         "horario": "16h35",
         "locais_para_embarque": [
             "Avenida João Valentim Pascoal, 955",
@@ -262,8 +262,8 @@
     },
     {
         "destino": "Ipatinga",
-        "placa": "GMOFS08",
-        "cor": "cinza",
+        "placa_do_carro": "GMOFS08",
+        "cor_do_carro": "cinza",
         "horario": "17h00",
         "locais_para_embarque": [
             "Avenida João Valentim Pascoal, 955",
@@ -291,8 +291,8 @@
     },
     {
         "destino": "Ipaba",
-        "placa": "JJK9T20",
-        "cor": "cinza",
+        "placa_do_carro": "JJK9T20",
+        "cor_do_carro": "cinza",
         "horario": "14H20",
         "locais_para_embarque": [
             "Avenida João Valentim Pascoal, 955",
@@ -320,8 +320,8 @@
     },
     {
         "destino": "Ipatinga",
-        "placa": "QZO7U19",
-        "cor": "cinza",
+        "placa_do_carro": "QZO7U19",
+        "cor_do_carro": "cinza",
         "horario": "15H45",
         "locais_para_embarque": [
             "Altivo Machado dos Reis, 505",
@@ -349,8 +349,8 @@
     },
     {
         "destino": "Ipatinga",
-        "placa": "QZO7U19",
-        "cor": "cinza",
+        "placa_do_carro": "QZO7U19",
+        "cor_do_carro": "cinza",
         "horario": "18H00",
         "locais_para_embarque": [
             "Altivo Machado dos Reis, 505",
@@ -378,8 +378,8 @@
     },
     {
         "destino": "Ipaba",
-        "placa": "QZO7U19",
-        "cor": "cinza",
+        "placa_do_carro": "QZO7U19",
+        "cor_do_carro": "cinza",
         "horario": "18H45",
         "locais_para_embarque": [
             "Avenida João Valentim Pascoal, 955",

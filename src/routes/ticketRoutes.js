@@ -7,11 +7,10 @@ const router = express.Router()
 // rota para gerar ticket de embarque
 router.post('/ticket/create', authentication.auth, controllerTicket.createTicket)
 
-// retornar todos os tickets
-router.get('/ticket/', authentication.auth, controllerTicket.getAll)
 
 // rota para alterar ticket
 router.put('/ticket/update/:id', authentication.auth, controllerTicket.updateTicket)
+
 
 // rota para remover ticket
 router.delete('/ticket/remove/:id', authentication.auth, controllerTicket.deleteTicket)

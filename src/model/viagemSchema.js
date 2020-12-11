@@ -6,7 +6,6 @@ const viagemSchema = new Schema({
     _id: {
         type: mongoose.Schema.Types.ObjectId,
         auto: true,
-        // ref: 'ticket',
         required: true
     },
     destino: {

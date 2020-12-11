@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
-const getToken = (param = {}) => jwt.sign(param, SECRET)
+const createToken = (param = {}) => jwt.sign(param, SECRET, { expiresIn: '15m' })
 
 
 const signUp = async (req, res) => {
@@ -38,7 +38,7 @@ const signIn = (req, res) => {
         return res.status(200).send({
             user,
 
-            token: getToken({ email: req.body.email })
+            token: createToken({ email: req.body.email })
         })
     })
 

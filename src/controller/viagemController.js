@@ -34,10 +34,11 @@ const findById = (req, res) => {
 //     const viagem = new viagemCollection(req.body)
 
 //     viagem.save((error) => {
+//         console.log(error)
 //         if (error)
-//             return res.sendStatus(500)
+//             res.status(500).send(error)
 
-//         return res.status(200).send('Busu criado com sucesso')
+//         res.status(201).send(viagem)
 //     })
 
 // }
@@ -46,5 +47,6 @@ const findById = (req, res) => {
 
 module.exports = {
     getAll,
-    findById
+    findById,
+
 }

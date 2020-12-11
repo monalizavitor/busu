@@ -8,6 +8,7 @@ const router = express.Router()
 // rota para cadastro
 router.post('/user/signup', UserController.signUp)
 
+
 // rota para login
 router.post('/user/signin', UserController.signIn)
 

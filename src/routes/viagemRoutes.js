@@ -10,4 +10,5 @@ router.get('/viagem/all', controllerViagem.getAll)
 router.get('/viagem/:id', controllerViagem.findById)
 
 
+
 module.exports = router

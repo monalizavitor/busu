@@ -1,30 +1,20 @@
 const ticketCollection = require('../model/ticketSchema')
 
 
-const getAll = (req, res) => {
-
-    const ticket = ticketCollection.find().populate('viagemId')
-
-    return res.status(200).send(ticket)
-
-}
-
-
 const createTicket = (req, res) => {
 
-    const newTicket = new ticketCollection(req.body)
+    const ticketBody = req.body
+    const newTicket = new ticketCollection(ticketBody)
 
     newTicket.save((error) => {
 
         if (error)
-            return res.status(500).send(error)
+            res.status(500).send(error)
 
-        return res.status(201).
-            send('Ticket gerado com sucesso! ', newTicket)
+        return res.status(201).send(newTicket)
     })
 
 }
-
 
 const updateTicket = (req, res) => {
 
@@ -41,7 +31,7 @@ const updateTicket = (req, res) => {
             if (error)
                 return res.sendStatus(500)
 
-            return res.status(200).send({ message: `${ticket} ${req.params.id} alterado.` })
+            return res.status(200).send(`${ticket} ${req.params.id} alterado.`)
 
         }
     )
@@ -56,7 +46,7 @@ const deleteTicket = (req, res) => {
             return res.status(500).send('Houve um erro!')
         if (!ticket)
             return res.status(404).send('Id não encontrado!')
-        return res.status(200).send(`Ticket cancelado com sucesso, ${ticket.nome}!`)
+        return res.status(200).send(`${ticket.nome}, seu ticket foi cancelado com sucesso !`)
     })
 }
 
@@ -65,6 +55,5 @@ const deleteTicket = (req, res) => {
 module.exports = {
     createTicket,
     updateTicket,
-    deleteTicket,
-    getAll
+    deleteTicket
 }
