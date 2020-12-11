@@ -4,35 +4,27 @@ const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
 
+const getAll = (req, res) => {
 
-const getTicket = (req, res) => {
-    console.log(`Método: ${req.method} ${req.url}`)
+        const ticket = ticketCollection.find().populate('viagemId')
 
-    const authHeader = req.get('authorization')
+        return res.status(200).send(ticket)
 
-    if (!authHeader)
-        return res.status(401).send({ message: 'Headers não foi encontrado!' })
+}
 
 
-    const token = authHeader.split(' ')[1]
-
-    jwt.verify(token, SECRET, (error) => {
-        if (error)
-            return res.status(403).send({ message: 'Token inválido!' })
+const createTicket = (req, res) => {
 
         const newTicket = new ticketCollection(req.body)
-        
+
         newTicket.save((error) => {
 
             if (error)
                 return res.status(500).send(error)
 
             return res.status(201).
-                send('Ticket gerado com sucesso! ' + newTicket)
-
+                send('Ticket gerado com sucesso! ')
         })
-
-    })
 
 }
 
@@ -40,7 +32,7 @@ const getTicket = (req, res) => {
 const updateTicket = (req, res) => {
     console.log(`Método: ${req.method} ${req.url}`)
 
-    
+
     const id = req.params.id //pegando o valor do ID na URL
     const ticketBody = request.body
     const update = { new: true }
@@ -49,7 +41,7 @@ const updateTicket = (req, res) => {
         id,
         ticketBody,
         update,
-        (error, 
+        (error,
             ticket) => {
             if (error)
                 return res.sendStatus(500)
@@ -77,7 +69,8 @@ const deleteTicket = (req, res) => {
 
 
 module.exports = {
-    getTicket,
+    createTicket,
     updateTicket,
-    deleteTicket
+    deleteTicket,
+    getAll
 }

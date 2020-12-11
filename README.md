@@ -16,7 +16,7 @@
 
 ## :bookmark: Sobre o Projeto
 
-O **Busu** é uma solução de transporte intermunicipal que atende bairros mais afastados do centro. Nosso principal objetivo é levar um veículo de oportunidades com um valor justo para todxs em suas locomoções diárias. Queremos mudar a realidade de milhares de famílias que não têm transporte digno e acessível em seus bairros/comunidades.
+O **Busu** é uma solução de transporte intermunicipal que atende bairros mais afastados do centro. Nosso principal objetivo é levar um veículo de oportunidades com um valor justo para todxs em suas locomoções diárias. O usuário contará com a aplicação para ver rotas, horários, detalhes do carro e também reservar seu ticket de embarque. Queremos mudar a realidade de milhares de famílias que não têm transporte digno e acessível em seus bairros/comunidades.
 
 
 ## :rocket: Tecnologias Utilizadas
@@ -37,17 +37,26 @@ Método | Rota |	Descrição |
 -----| ------- | --------- |
 POST |`www.busu/user/signup` |	Página para criar cadastro
 POST |`www.busu/user/signin` |	Página para fazer login com autenticação
-GET | `www.busu.viagem/all` | Retorna todas as viagens.
-GET | `www.busu.viagem/:name` | Retorna viagens filtradas por destino.
+GET | `www.busu/viagem/all` | Retorna todas as viagens.
+GET | `www.busu/viagem/:id` | Retorna viagens filtradas por id.
 POST | `www.busu/ticket/create` |	Gera o ticket de embarque.
 PUT | `www.busu/ticket/update/:id` |	Encontra o ticket a partir de um parâmetro e edita dado.
-DELETE | `www.busu/ticket/cancel/:id` |	Deleta um dado a partir de um parâmetro.
+DELETE | `www.busu/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 
 
 
-### :computer: Teste o Busu em uma máquina virtual 
+### :computer: Teste o Busu em uma maquina virtual 
 
-[Heroku](https://app-busu.herokuapp.com/).
+[Heroku](https://app-busu.herokuapp.com/index).
+
+
+### :rockeatseat: Próximos passos
+
+A vontade de dar vida ao Busu é real e necessária, por isso, ele ainda tem muito o que desenvolver em suas próximas versões. 
+
+[x] Rotas autenticadas para login;
+[x] Controle de acesso; 
+
 
 #### :memo: Licença
 

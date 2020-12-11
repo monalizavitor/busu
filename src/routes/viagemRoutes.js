@@ -6,11 +6,8 @@ const router = express.Router()
 // rota para obter todas as viagens
 router.get('/all', controllerViagem.getAll)
 
-// router.get('/:id', controllerViagem.findBusu)
+// para obter uma viagem pelo id
+router.get('/:id', controllerViagem.findById)
 
-router.get('/:name', controllerViagem.findBusuByRoute)
-
-// rota para criar viagem
-router.post('/create', controllerViagem.createViagem)
 
 module.exports = router

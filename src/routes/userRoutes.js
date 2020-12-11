@@ -1,4 +1,5 @@
 const UserController = require('../controller/userController')
+const authentication = require('../auth/auth')
 
 const express = require('express')
 const router = express.Router()
@@ -11,10 +12,8 @@ router.post('/signup', UserController.signUp)
 router.post('/signin', UserController.signIn)
 
 
-router.get('/all', UserController.getAll)
-
 // rota para deletar user
-router.delete('/delete/:id', UserController.deleteUser)
+router.delete('/delete/:id', authentication.auth, UserController.deleteUser)
 
 
 module.exports = router

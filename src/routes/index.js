@@ -5,7 +5,7 @@ const router = express.Router()
 router.get('/', (req, res) => 
     res.status(200).send({ 
         titulo: 'Bem vindas (os) ao Busu!', 
-        version: '0.01'
+        version: '0.0001'
     })
 )
 
