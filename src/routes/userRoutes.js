@@ -6,14 +6,14 @@ const router = express.Router()
 
 
 // rota para cadastro
-router.post('/signup', UserController.signUp)
+router.post('/user/signup', UserController.signUp)
 
 // rota para login
-router.post('/signin', UserController.signIn)
+router.post('/user/signin', UserController.signIn)
 
 
 // rota para deletar user
-router.delete('/delete/:id', authentication.auth, UserController.deleteUser)
+router.delete('/user/delete/:id', authentication.auth, UserController.deleteUser)
 
 
 module.exports = router

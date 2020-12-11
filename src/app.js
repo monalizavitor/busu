@@ -24,19 +24,19 @@ app.use(express.json())
 
 //configuração do cors
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*')
-    res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept'
-      )
-      next()
-    })
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  )
+  next()
+})
 
 //rotas
-app.use('/user', routesUser)
-app.use('/viagem', routesViagem)
-app.use('/ticket', routesTicket)
-app.use('/index', routesindex)
+app.use('/', routesUser)
+app.use('/', routesViagem)
+app.use('/', routesTicket)
+app.use('/busu', routesindex)
 
 
 

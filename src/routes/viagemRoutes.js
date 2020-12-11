@@ -4,10 +4,10 @@ const express = require('express')
 const router = express.Router()
 
 // rota para obter todas as viagens
-router.get('/all', controllerViagem.getAll)
+router.get('/viagem/all', controllerViagem.getAll)
 
 // para obter uma viagem pelo id
-router.get('/:id', controllerViagem.findById)
+router.get('/viagem/:id', controllerViagem.findById)
 
 
 module.exports = router

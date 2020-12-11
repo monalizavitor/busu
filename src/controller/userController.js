@@ -52,7 +52,7 @@ const deleteUser = (req, res) => {
     userCollection.findByIdAndDelete(id, (error, user) => {
         if (error)
             return res.status(500).send('Houve um erro!')
-        if (!user)
+        if (!id)
             return res.status(404).send('Id não encontrado!')
         return res.status(200).send(`Usuário ${user.nome} deletado com sucesso!`)
     })

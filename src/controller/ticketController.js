@@ -1,40 +1,35 @@
 const ticketCollection = require('../model/ticketSchema')
 
-const jwt = require('jsonwebtoken')
-const SECRET = process.env.SECRET
-
 
 const getAll = (req, res) => {
 
-        const ticket = ticketCollection.find().populate('viagemId')
+    const ticket = ticketCollection.find().populate('viagemId')
 
-        return res.status(200).send(ticket)
+    return res.status(200).send(ticket)
 
 }
 
 
 const createTicket = (req, res) => {
 
-        const newTicket = new ticketCollection(req.body)
+    const newTicket = new ticketCollection(req.body)
 
-        newTicket.save((error) => {
+    newTicket.save((error) => {
 
-            if (error)
-                return res.status(500).send(error)
+        if (error)
+            return res.status(500).send(error)
 
-            return res.status(201).
-                send('Ticket gerado com sucesso! ')
-        })
+        return res.status(201).
+            send('Ticket gerado com sucesso! ', newTicket)
+    })
 
 }
 
 
 const updateTicket = (req, res) => {
-    console.log(`Método: ${req.method} ${req.url}`)
 
-
-    const id = req.params.id //pegando o valor do ID na URL
-    const ticketBody = request.body
+    const id = req.params.id
+    const ticketBody = req.body
     const update = { new: true }
 
     ticketCollection.findByIdAndUpdate(
@@ -53,7 +48,6 @@ const updateTicket = (req, res) => {
 }
 
 const deleteTicket = (req, res) => {
-    console.log(`Método: ${req.method} ${req.url}`)
 
     const id = req.params.id
 
