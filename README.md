@@ -86,8 +86,9 @@ O **Busu** é uma solução de transporte intermunicipal que atende bairros mais
 
 Método | Rota |	Descrição |
 -----| ------- | --------- |
-POST |`/user/signup` |	Página para criar cadastro
-POST |`/user/signin` |	Página para fazer login com autenticação
+GET | `/busu` |	Página de boas vindas
+POST | `/user/signup` |	Página para criar cadastro
+POST | `/user/signin` |	Página para fazer login com autenticação
 GET | `/viagem/all` | Retorna todas as viagens.
 GET | `/viagem/:id` | Retorna viagens filtradas por id.
 POST | `/ticket/create` |	Gera o ticket de embarque.
@@ -103,9 +104,9 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 
 {
     "_id": "5fd3da1e7d094b0aac84e21f",
-    "nome": "user",
-    "email": "user@gmail.com",
-    "senha": "teste"
+    "nome": "Angela Davis",
+    "email": "angeladavis@gmail.com",
+    "senha": "poderaopovo"
 }
 ```
 
@@ -113,8 +114,8 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 //corpo para o usuário fazer login
 
 {
-    "email": "user@gmail.com",
-    "senha": "teste"
+    "email": "angeladavis@gmail.com",
+    "senha": "poderaopovo"
 }
 
 ```
@@ -174,8 +175,8 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
     "message": "Ticket gerado com sucesso! ",
     "response": {
         "id": "5fd42131cdf85b23b4884b89",
-        "nome": "Armando Batista",
-        "data_da_viagem": "2002-12-09T00:00:00.000Z",
+        "nome": "Angela Davis",
+        "data_da_viagem": "2020-12-12T00:00:00.000Z",
         "destino": "Ipaba",
         "horario": "7h05",
         "placa_do_carro": "BAE4T25",
@@ -215,7 +216,7 @@ https://app-busu.herokuapp.com/busu
 
 A vontade de dar vida ao Busu é real e necessária, por isso, ele ainda tem muito o que desenvolver em suas próximas versões. 
 
-- Contar quantidade de acentos disponíveis na viagem;
+- Contar quantidade de assentos disponíveis na viagem;
 - QR code para ticket único;
 - Acesso do administrador;
 - Controle de acesso;
