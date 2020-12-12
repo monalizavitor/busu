@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 app.use('/', routesUser)
 app.use('/', routesViagem)
 app.use('/', routesTicket)
-app.use('/busu', routesindex)
+app.use('/', routesindex)
 
 
 
