@@ -1,10 +1,7 @@
 <h1 align="center">
     <br> :oncoming_bus: Busu<br/>
-
-
     
 </h1>
-
 
 
 <p>
@@ -12,14 +9,19 @@
     <a href="#rocket-tecnologias-utilizadas">Tecnologias</a> |
     <a href="#file_folder-arquitetura-mvc">Arquitetura</a> |
     <a href="#pushpin-rotas">Rotas</a> |
-     <a href="#:bookmark_tabs: Estrutura dos dados">Dados</a> |
+     <a href="#bookmark_tabs-estrutura-dos-dados">Dados</a> |
     <a href="#computer-teste-o-busu-em-uma-maquina-virtual">Teste</a> |
     <a href="#rocket-proximos-passos">Próximos passos</a> | 
     <a href="#memo-licença">Licença</a>
     
 </p>
+<h2 align="center">
+    
 
 ![logo](https://i.ibb.co/HCNtfgM/Busu.gif)
+    
+</h2>
+
 
 ## :books: Sobre o Projeto
 
