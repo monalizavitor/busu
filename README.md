@@ -3,7 +3,7 @@
     
 </h1>
 
-
+<h2 align="center">
 <p>
     <a href="#books-sobre-o-projeto">Sobre</a> |
     <a href="#rocket-tecnologias-utilizadas">Tecnologias</a> |
@@ -15,7 +15,7 @@
     <a href="#memo-licença">Licença</a>
     
 </p>
-<h2 align="center">
+
     
 
 ![logo](https://i.ibb.co/HCNtfgM/Busu.gif)
