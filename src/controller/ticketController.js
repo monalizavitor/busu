@@ -1,20 +1,30 @@
 const ticketCollection = require('../model/ticketSchema')
 
 
-const createTicket = (req, res) => {
-
+const createTicket = async (req, res) => {
     const ticketBody = req.body
     const newTicket = new ticketCollection(ticketBody)
 
-    newTicket.save((error) => {
+    await newTicket.save()
+    const newTicketWithViagem = await ticketCollection
+        .findById(newTicket._id)
+        .populate("viagemId")
 
-        if (error)
-            res.status(500).send(error)
+    const response = {
+        id: newTicket._id,
+        nome: newTicket.nome,
+        data_da_viagem: newTicket.data_da_viagem,
+        destino: newTicketWithViagem.viagemId.destino,
+        horario: newTicketWithViagem.viagemId.horario,
+        placa_do_carro: newTicketWithViagem.viagemId.placa_do_carro,
+        locais_para_embarque: newTicketWithViagem.viagemId.locais_para_embarque,
+        locais_para_desembarque:
+            newTicketWithViagem.viagemId.locais_para_desembarque,
+    }
 
-        return res.status(201).send(newTicket)
-    })
-
+    return res.status(201).send({ message: 'Ticket gerado com sucesso! ', response })
 }
+
 
 const updateTicket = (req, res) => {
 

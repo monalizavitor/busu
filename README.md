@@ -100,6 +100,7 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 ```
 
 //corpo do usuário para fazer o cadastro
+
 {
     "_id": "5fd3da1e7d094b0aac84e21f",
     "nome": "user",
@@ -110,6 +111,7 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 
 ```
 //corpo para o usuário fazer login
+
 {
     "email": "user@gmail.com",
     "senha": "teste"
@@ -118,6 +120,7 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 ```
 ```
 //JSON da viagem
+
 {
         "destino": "Ipatinga",
         "placa_do_carro": "GMOFS08",
@@ -152,24 +155,59 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 
 
 ```
-//corpo do ticket de embarque gerado pelo usuário
+//corpo da requisição para gerar o ticket de embarque
 
     {
         "_id": "5fd261968d1284091cb331db",
         "nome": "Angela Davis",
         "data_da_viagem": "2020-01-21T03:00:00.000Z",
-        "destino": "Ipatinga",
         "viagemId": "5fd2808063dba433a474ae35"
     }
 
-
 ```
 
+```
+// ticket de embarque
+
+{
+
+    "message": "Ticket gerado com sucesso! ",
+    "response": {
+        "id": "5fd42131cdf85b23b4884b89",
+        "nome": "Armando Batista",
+        "data_da_viagem": "2002-12-09T00:00:00.000Z",
+        "destino": "Ipaba",
+        "horario": "7h05",
+        "placa_do_carro": "BAE4T25",
+        "locais_para_embarque": [
+            "Avenida João Valentim Pascoal, 955",
+            "Câmara Municipal De Ipatinga",
+            "Avenida João Valentim Pascoal, 829",
+            "Avenida João Valentim Pascoal, 637",
+            "Terminal Rodoviário De Ipatinga",
+            "Avenida João Valentim Pascoal, 255",
+            "Avenida João Valentim Pascoal, 135",
+            "Avenida Cláudio Moura - Acesso Ao Bairro Castelo"
+        ],
+        "locais_para_desembarque": [
+            "Altivo Machado dos Reis, 505",
+            "Rua Altivo Machado dos Reis, 299",
+            "Rua Pouso Alegrem, 451",
+            "Rua Benedito José de Souza, 168",
+            "Rua Olivia Rodrigues Viera, 268",
+            "Rua dos esportes, 51, em frente ao campo de futebol",
+            "Rua Itabira, 443 (av dois)",
+            "Praça Padre Jose Lanzilotd, 102 Ipaba"
+        ]
+    
+}
+
+```
 
 ### :computer: Teste o Busu em uma maquina virtual 
 
 > Acesse o link 
-https://app-busu.herokuapp.com/
+https://app-busu.herokuapp.com/busu
 
 
 
