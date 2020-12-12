@@ -158,7 +158,6 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 //corpo da requisição para gerar o ticket de embarque
 
     {
-        "_id": "5fd261968d1284091cb331db",
         "nome": "Angela Davis",
         "data_da_viagem": "2020-01-21T03:00:00.000Z",
         "viagemId": "5fd2808063dba433a474ae35"
