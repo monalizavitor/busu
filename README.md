@@ -103,7 +103,6 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 //corpo do usuário para fazer o cadastro
 
 {
-    "_id": "5fd3da1e7d094b0aac84e21f",
     "nome": "Angela Davis",
     "email": "angeladavis@gmail.com",
     "senha": "poderaopovo"
