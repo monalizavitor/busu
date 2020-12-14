@@ -103,9 +103,14 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 //corpo do usuário para fazer o cadastro
 
 {
+<<<<<<< HEAD
     "_id": "5fd3da1e7d094b0aac84e21f",
     "nome": "Angela Davis",
     "email": "user@gmail.com",
+=======
+    "nome": "Angela Davis",
+    "email": "angeladavis@gmail.com",
+>>>>>>> c251fae5f88134ebd15025ee97ff9f840ca7418e
     "senha": "poderaopovo"
 }
 ```
@@ -159,7 +164,6 @@ DELETE | `/ticket/remove/:id` |	Deleta um dado a partir de um parâmetro.
 //corpo da requisição para gerar o ticket de embarque
 
     {
-        "_id": "5fd261968d1284091cb331db",
         "nome": "Angela Davis",
         "data_da_viagem": "2020-12-12T03:00:00.000Z",
         "viagemId": "5fd2808063dba433a474ae35"

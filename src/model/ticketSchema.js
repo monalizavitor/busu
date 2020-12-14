@@ -22,7 +22,7 @@ const ticketSchema = new Schema({
     },
     viagemId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'viagensBusu',
+        ref: 'viagens',
         required: true
 
     }

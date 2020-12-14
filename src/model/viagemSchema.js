@@ -60,6 +60,6 @@ const viagemSchema = new Schema({
 
 })
 
-const viagemCollection = mongoose.model('viagensBusu', viagemSchema)
+const viagemCollection = mongoose.model('viagens', viagemSchema)
 
 module.exports = viagemCollection
