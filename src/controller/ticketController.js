@@ -8,9 +8,12 @@ const createTicket = async (req, res) => {
     await newTicket.save()
     const newTicketWithViagem = await ticketCollection
         .findById(newTicket._id)
-        .populate("viagemId")
+        .populate("viagens")
 
-    const response = {
+    if(!newTicket._id)
+        return 'Id da viagem não foi encontrado!'
+
+        const response = {
         id: newTicket._id,
         nome: newTicket.nome,
         data_da_viagem: newTicket.data_da_viagem,
@@ -20,6 +23,8 @@ const createTicket = async (req, res) => {
         locais_para_embarque: newTicketWithViagem.viagemId.locais_para_embarque,
         locais_para_desembarque:
             newTicketWithViagem.viagemId.locais_para_desembarque,
+            preco_da_passagem: newTicketWithViagem.viagemId.preco_da_passagem,
+            nome_do_motorista: newTicketWithViagem.viagemId.nome_do_motorista
     }
 
     return res.status(201).send({ message: 'Ticket gerado com sucesso! ', response })
